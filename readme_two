@@ -1,0 +1,11 @@
+
+  # University Publications Website
+
+  This is a code bundle for University Publications Website. The original project is available at https://www.figma.com/design/k9e1kS37O00AW1VbTXAXW1/University-Publications-Website.
+
+  ## Running the code
+
+  Run `npm i` to install the dependencies.
+
+  Run `npm run dev` to start the development server.
+  
