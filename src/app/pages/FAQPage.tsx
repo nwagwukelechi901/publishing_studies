@@ -20,7 +20,7 @@ export function FAQPage({ setPage }: Props) {
         subtitle="Answers to the most common questions about UIIPS and the University of Abuja."
       />
 
-      <div className="max-w-3xl mx-auto px-6 py-16">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="space-y-3">
           {FAQS.map((faq, i) => (
             <div
@@ -43,7 +43,7 @@ export function FAQPage({ setPage }: Props) {
                 </span>
               </button>
               {openIdx === i && (
-                <div className="px-6 pb-6 border-t border-border pt-4">
+                <div className="px-4 sm:px-6 pb-6 border-t border-border pt-4">
                   <p className="font-body text-muted-foreground text-sm leading-relaxed">
                     {faq.a}
                   </p>
@@ -53,7 +53,7 @@ export function FAQPage({ setPage }: Props) {
           ))}
         </div>
 
-        <div className="mt-12 bg-secondary border border-border p-8 text-center">
+        <div className="mt-12 bg-secondary border border-border p-6 md:p-8 text-center">
           <Info size={24} className="text-accent mx-auto mb-3" />
           <h3 className="font-display text-foreground font-semibold text-lg mb-2">
             Didn't find your answer?

@@ -23,13 +23,13 @@ export function Navbar({ current, setPage }: NavbarProps) {
 
   return (
     <nav className="sticky top-0 z-50 bg-primary border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Brand */}
         <button
           onClick={() => setPage("home")}
           className="flex items-center gap-3 flex-shrink-0"
         >
-          <UniLogo size={40} />
+          <UniLogo size={36} />
           <div className="text-left">
             <div className="font-display text-white font-semibold text-sm leading-tight">
               University of Abuja
@@ -68,7 +68,7 @@ export function Navbar({ current, setPage }: NavbarProps) {
 
       {/* Mobile drawer */}
       {open && (
-        <div className="lg:hidden bg-primary border-t border-white/10 px-6 py-5 grid grid-cols-2 gap-3">
+        <div className="lg:hidden bg-primary border-t border-white/10 px-4 sm:px-6 py-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
           {NAV_ITEMS.map((item) => (
             <button
               key={item.page}

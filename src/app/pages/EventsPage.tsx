@@ -31,11 +31,12 @@ export function EventsPage({ setPage }: Props) {
 
       {/* Filter bar */}
       <div className="bg-secondary border-b border-border py-3">
-        <div className="max-w-7xl mx-auto px-6 flex items-center gap-2 flex-wrap">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 flex-wrap">
           {allTypes.map((t) => (
             <button
               key={t}
               onClick={() => setFilter(t)}
+              aria-pressed={filter === t}
               className={`font-mono text-[10px] px-3 py-1.5 transition-colors ${
                 filter === t
                   ? "bg-primary text-white"
@@ -48,26 +49,35 @@ export function EventsPage({ setPage }: Props) {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
         <div className="space-y-5">
-          {filtered.map((event) => (
+  {filtered.length === 0 ? (
+    <div className="bg-card border border-border p-8 text-center">
+      <h3 className="font-display text-xl font-bold text-foreground mb-2">
+        No events found
+      </h3>
+      <p className="font-body text-muted-foreground">
+        There are currently no events in this category.
+      </p>
+    </div>
+  ) : (
+    filtered.map((event) => (
             <div
               key={event.id}
-              className="bg-card border border-border hover:border-accent/35 transition-all duration-200 group overflow-hidden"
-            >
-              <div className="flex gap-0">
+              className="bg-card border border-border hover:border-accent/35 hover:-translate-y-1 transition-all duration-200 group overflow-hidden">
+              <div className="flex flex-col sm:flex-row gap-0">
                 {/* Date column */}
-                <div className="bg-primary flex-shrink-0 w-24 flex flex-col items-center justify-center py-6 px-4 text-center">
+                <div className="bg-primary flex-shrink-0 w-full sm:w-24 flex flex-col items-center justify-center py-5 sm:py-6 px-4 text-center">
                   <div className="font-mono text-emerald-300 text-[10px] uppercase tracking-wider">
                     {event.month}
                   </div>
-                  <div className="font-display text-white text-4xl font-bold leading-none mt-1">
+                  <div className="font-display text-white text-3xl sm:text-4xl font-bold leading-none mt-1">
                     {event.day}
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 p-6 min-w-0">
+                <div className="flex-1 p-4 sm:p-6 min-w-0">
                   <div className="flex items-start gap-4 mb-2">
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="font-mono text-[9px] bg-secondary border border-border text-muted-foreground px-2 py-0.5 uppercase tracking-wider">
@@ -80,7 +90,7 @@ export function EventsPage({ setPage }: Props) {
                       )}
                     </div>
                   </div>
-                  <h3 className="font-display text-foreground text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                  <h3 className="font-display text-foreground text-xl font-bold mb-3 group-hover:text-accent transition-colors">
                     {event.title}
                   </h3>
                   <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">
@@ -103,11 +113,12 @@ export function EventsPage({ setPage }: Props) {
                 </div>
               </div>
             </div>
-          ))}
+          ))
+         )}
         </div>
 
         {/* Contact strip */}
-        <div className="mt-12 bg-secondary border border-border p-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-12 bg-secondary border border-border p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
           <div>
             <h3 className="font-display text-foreground font-semibold text-lg mb-1">
               Want to be notified about new events?
@@ -118,7 +129,7 @@ export function EventsPage({ setPage }: Props) {
           </div>
           <a
             href="mailto:uiips@uniabuja.edu.ng"
-            className="flex items-center gap-2 bg-primary text-white font-body text-sm px-6 py-3 hover:bg-accent transition-colors flex-shrink-0"
+            className="flex items-center justify-center gap-2 bg-primary text-white font-body text-sm px-6 py-3 hover:bg-accent transition-colors w-full md:w-auto break-all"
           >
             <Mail size={14} /> uiips@uniabuja.edu.ng
           </a>

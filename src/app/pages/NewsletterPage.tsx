@@ -66,10 +66,10 @@ export function NewsletterPage({ setPage }: Props) {
         subtitle="The official newsletter of UIIPS — research updates, events, opportunities, and more, delivered to your inbox."
       />
 
-      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-5 gap-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-14">
         {/* Subscribe card */}
         <div className="md:col-span-2">
-          <div className="bg-card border border-border p-8 sticky top-24">
+          <div className="bg-card border border-border p-6 md:p-8 md:sticky md:top-24">
             {!submitted ? (
               <>
                 <div className="font-mono text-accent text-[10px] uppercase tracking-wider mb-4">Subscribe</div>
@@ -167,7 +167,7 @@ export function NewsletterPage({ setPage }: Props) {
           <div>
             <div className="font-mono text-accent text-[10px] uppercase tracking-wider mb-4">What to Expect</div>
             <h2 className="font-display text-foreground text-2xl font-bold mb-6">What's Inside Each Issue</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {CONTENTS.map((item) => (
                 <div key={item.title} className="flex gap-3 p-4 bg-secondary border border-border">
                   <div className="text-accent flex-shrink-0 mt-0.5">{item.icon}</div>

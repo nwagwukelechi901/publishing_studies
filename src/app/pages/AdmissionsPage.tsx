@@ -75,9 +75,9 @@ export function AdmissionsPage({ setPage }: Props) {
         subtitle="Entry information for the UIIPS 12-month professional Master's Degree in Publishing Studies at the University of Abuja."
       />
 
-      <div className="max-w-7xl mx-auto px-6 py-16 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-12 md:space-y-16">
         {/* Quick stats */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[
             { icon: <Calendar size={22} />, title: "Next Intake", value: "September 2027", sub: "applications open Feb 2027" },
             { icon: <Clock size={22} />, title: "Duration", value: "12 Months", sub: "full-time, professional" },
@@ -95,7 +95,7 @@ export function AdmissionsPage({ setPage }: Props) {
         </div>
 
         {/* Requirements + Steps */}
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div>
             <h2 className="font-display text-foreground text-2xl font-bold mb-6">Entry Requirements</h2>
             <div className="space-y-5">
@@ -128,13 +128,13 @@ export function AdmissionsPage({ setPage }: Props) {
         <div>
           <h2 className="font-display text-foreground text-2xl font-bold mb-6">Tuition & Fees</h2>
           <div className="bg-card border border-border overflow-hidden">
-            <div className="bg-primary px-6 py-4 grid grid-cols-3 gap-4">
+            <div className="hidden md:grid bg-primary px-6 py-4 grid-cols-3 gap-4">
               <div className="font-mono text-emerald-300 text-[10px] uppercase tracking-wider">Fee Type</div>
               <div className="font-mono text-emerald-300 text-[10px] uppercase tracking-wider">Nigerian Students</div>
               <div className="font-mono text-emerald-300 text-[10px] uppercase tracking-wider">International Students</div>
             </div>
             {FEES.map(([type, ng, intl], i) => (
-              <div key={type} className={`px-6 py-4 grid grid-cols-3 gap-4 ${i % 2 === 0 ? "bg-card" : "bg-secondary"}`}>
+              <div key={type}className={`px-4 md:px-6 py-4 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 ${i % 2 === 0 ? "bg-card" : "bg-secondary"}`}>
                 <div className="font-body text-foreground text-sm">{type}</div>
                 <div className="font-mono text-foreground text-sm">{ng}</div>
                 <div className="font-mono text-muted-foreground text-sm">{intl}</div>

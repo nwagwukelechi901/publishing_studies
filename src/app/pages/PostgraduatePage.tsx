@@ -82,9 +82,9 @@ export function PostgraduatePage({ setPage }: Props) {
         subtitle="A 12-month professional Master's Degree — the flagship programme of the University of Abuja International Institute for Publishing Studies."
       />
 
-      <div className="max-w-7xl mx-auto px-6 py-16 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-12 md:space-y-16">
         {/* Quick stats */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[
             { icon: <Clock size={20} />, label: "Duration", value: "12 months", sub: "full-time" },
             { icon: <GraduationCap size={20} />, label: "Award", value: "MSc", sub: "Publishing Studies" },
@@ -102,7 +102,7 @@ export function PostgraduatePage({ setPage }: Props) {
         </div>
 
         {/* Description + Modules */}
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div>
             <h2 className="font-display text-foreground text-2xl font-bold mb-6">About the Programme</h2>
             <div className="space-y-4 font-body text-muted-foreground leading-relaxed text-sm">
@@ -138,7 +138,7 @@ export function PostgraduatePage({ setPage }: Props) {
         </div>
 
         {/* Entry + Funding */}
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div>
             <h2 className="font-display text-foreground text-2xl font-bold mb-6">Entry Requirements</h2>
             <div className="space-y-5">

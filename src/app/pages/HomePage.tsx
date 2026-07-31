@@ -59,13 +59,12 @@ export function HomePage({ setPage }: Props) {
           ))}
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center w-full">
-          <div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center w-full">         <div>
             <div className="font-mono text-emerald-300 text-[10px] tracking-[0.35em] uppercase mb-8 flex items-center gap-3">
               <span className="w-8 h-px bg-emerald-300 inline-block" />
               Est. April 12, 2024 — UIIPS
             </div>
-            <h1 className="font-display text-white text-5xl md:text-6xl font-bold leading-[1.08] mb-5">
+            <h1 className="font-display text-white text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.08] mb-5">
               Nigeria's Institute for Publishing Studies
             </h1>
             <p className="font-body text-white/60 text-lg leading-relaxed mb-3 max-w-lg">
@@ -108,7 +107,7 @@ export function HomePage({ setPage }: Props) {
           </div>
 
           {/* Hero right: stacked campus photos */}
-          <div className="hidden md:flex flex-col gap-3">
+          <div className="flex flex-col gap-3 mt-8 md:mt-0">
             <div className="relative overflow-hidden shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1650128351914-c84e15c730b2?w=700&h=380&fit=crop&auto=format"
@@ -274,7 +273,7 @@ export function HomePage({ setPage }: Props) {
 
       {/* ── Why UIIPS ── */}
       <section className="bg-primary py-20">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
             <div className="font-mono text-emerald-300 text-[10px] tracking-[0.2em] uppercase mb-4">Why Choose UIIPS</div>
             <h2 className="font-display text-white text-3xl font-bold mb-6">

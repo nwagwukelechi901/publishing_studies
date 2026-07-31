@@ -73,11 +73,11 @@ export function AboutPage({ setPage }: Props) {
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/40 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 max-w-7xl mx-auto px-6 pb-10">
+        <div className="absolute bottom-0 left-0 right-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 md:pb-10">
           <div className="font-mono text-emerald-300 text-[10px] tracking-[0.25em] uppercase mb-3 flex items-center gap-3">
             <span className="w-6 h-px bg-emerald-300" /> Institution
           </div>
-          <h1 className="font-display text-white text-4xl md:text-6xl font-bold mb-2">About UIIPS</h1>
+          <h1 className="font-display text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-2">About UIIPS</h1>
           <p className="font-body text-white/60 text-base max-w-2xl">
             Nigeria's first dedicated professional publishing institute, established April 12, 2024.
           </p>
@@ -90,7 +90,7 @@ export function AboutPage({ setPage }: Props) {
 
       {/* Tab bar */}
       <div className="bg-secondary border-b border-border sticky top-16 z-30">
-        <div className="max-w-7xl mx-auto px-6 flex overflow-x-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex overflow-x-auto scrollbar-hide">
           {TABS.map((t) => (
             <button
               key={t.id}
@@ -107,10 +107,10 @@ export function AboutPage({ setPage }: Props) {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         {/* History */}
         {tab === "history" && (
-          <div className="grid md:grid-cols-5 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12">
             <div className="md:col-span-3 space-y-6">
               <h2 className="font-display text-foreground text-3xl font-bold">History of UIIPS</h2>
               <p className="font-body text-muted-foreground leading-relaxed">
@@ -174,7 +174,7 @@ export function AboutPage({ setPage }: Props) {
               </div>
 
               {/* Two smaller shots side-by-side */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="relative overflow-hidden shadow-md">
                   <img
                     src="https://images.unsplash.com/photo-1741900024959-c406f5e4eaa1?w=400&h=280&fit=crop&auto=format"
@@ -277,7 +277,7 @@ export function AboutPage({ setPage }: Props) {
               <div className="absolute top-4 right-6 font-mono text-white/30 text-[8px]">Photo: Ufoma Ojo</div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-14 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-start">
               <div>
                 <h2 className="font-display text-foreground text-3xl font-bold mb-6">Our Vision</h2>
                 <blockquote className="font-display text-foreground text-xl leading-relaxed italic mb-6 border-l-2 border-accent pl-6">
@@ -299,7 +299,7 @@ export function AboutPage({ setPage }: Props) {
                   West Africa.
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {VISION_STATS.map((item) => (
                   <div
                     key={item.label}
